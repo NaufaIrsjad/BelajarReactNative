@@ -1,11 +1,11 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 
 export default function FancyCards() {
   return (
     <View>
       <Text style={styles.headingText}>Trending Places</Text>
-      <View style={[styles.card, styles.cardElevated]}>
+      <TouchableOpacity style={[styles.card, styles.cardElevated]}>
         <Image
           source={{
             uri: 'https://img.freepik.com/free-photo/big-city_1127-3102.jpg?size=626&ext=jpg&ga=GA1.2.1746584620.1686765079&semt=sph',
@@ -23,12 +23,19 @@ export default function FancyCards() {
           </Text>
           <Text style={styles.cardFooter}>5 Mins Away</Text>
         </View>
+      </TouchableOpacity>
+      <View style={styles.test}>
+        {/* <Button title="asu" onPress={() => console.log('klik')}></Button> */}
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  test: {
+    marginHorizontal: 50,
+    fontWeight: 'bold',
+  },
   headingText: {
     fontSize: 24,
     fontWeight: 'bold',
